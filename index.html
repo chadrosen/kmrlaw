@@ -4,32 +4,64 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>KMR Law</title>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
   <style>
+    .logo-img {
+        height: 30px;
+        vertical-align: middle;
+        margin-right: 0.5rem;
+    }
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: 'IBM Plex Sans', sans-serif;
       line-height: 1.6;
       color: #333;
     }
-    header {
-      background: #2c3e50;
-      color: white;
-      padding: 2rem 1rem;
-      text-align: center;
+    .site-header {
+      background: white;
+      border-bottom: 1px solid #ddd;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-    nav {
-      background: #1a252f;
-      padding: 1rem;
-      text-align: center;
-    }
-    nav a {
-      color: white;
-      margin: 0 1rem;
+    .site-header .logo {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #1a1a1a;
       text-decoration: none;
+    }
+    .site-header nav a {
+      color: #1a1a1a;
+      margin-left: 1.5rem;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .site-header nav a:hover {
+      text-decoration: underline;
+    }
+    header.hero {
+      background: #f5f5f5;
+      color: #1a1a1a;
+      padding: 4rem 1rem 3rem;
+      text-align: center;
+      border-bottom: 1px solid #ccc;
+    }
+    header.hero h1 {
+      margin: 0;
+      font-size: 2.75rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+    header.hero p {
+      margin: 0.75rem 0 0;
+      font-size: 1.75rem;
+      color: #444;
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
     }
     section {
       padding: 2rem 1rem;
@@ -42,6 +74,18 @@
       text-align: center;
       padding: 1rem;
       margin-top: 2rem;
+    }
+    .footer-links {
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
+    }
+    .footer-links a {
+      color: #ccc;
+      margin: 0 0.75rem;
+      text-decoration: none;
+    }
+    .footer-links a:hover {
+      text-decoration: underline;
     }
     .contact-form input,
     .contact-form textarea {
@@ -62,19 +106,35 @@
   </style>
 </head>
 <body>
-  <header>
-    <h1>KMR Law</h1>
-    <p>Professional Legal Services</p>
+  <div class="site-header">
+    <a href="#" class="logo">
+        <img src="kmrlogo.heic" alt="KMR Law Logo" class="logo-img" />
+        kmrlaw
+      </a>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+
+  <header class="hero">
+    <p>Exceptional legal services for ed tech and education organizations</p>
   </header>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
-  </nav>
 
   <section id="about">
     <h2>About</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nulla at facilisis congue, erat libero consequat lacus, nec interdum sapien sapien nec quam.</p>
+    <p>
+        Kimberley Morris Rosen founded KMR Law in 2018. In her practice, she is a trusted counselor to clients in the education and ed tech space. She provides expert legal advice in the areas of corporate governance, contract, employment, education law, student privacy, product, corporate structure, and strategic advising. Previously, she was associate general counsel at AltSchool and special counsel at Emerson Collective. She was also a litigator at Munger, Tolles & Olson and Jenner & Block. 
+        She also served as a law clerk on the United States Court of Appeals for the Ninth Circuit.
+    </p>
+    <p>
+        Kimberley also serves as an elected trustee on her local school board, bringing firsthand insight into the workings of a school district. She has also served on the board of Windmill School and the Castilleja School Alumnae Board.
+    </p>
+    <p> 
+        Kimberley earned her undergraduate degree from Princeton University and her J.D. from Stanford Law School. She lives in the Bay Area with her husband and children.  
+    </p>
   </section>
 
   <section id="services">
@@ -88,17 +148,19 @@
 
   <section id="contact">
     <h2>Contact</h2>
-    <p>Please fill out the form below or reach out directly.</p>
-    <form class="contact-form">
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea rows="5" placeholder="Your Message"></textarea>
-      <button type="submit">Send Message</button>
-    </form>
+    <p>
+      If you have any questions or would like to schedule a consultation, 
+      please contact me at <a href="mailto:kimberley@thekmrlawfirm.com">kimberley@thekmrlawfirm.com</a>
+      or through <a href="https://www.linkedin.com/in/kimberley-morris-rosen-318b3319/" target="_blank">linkedin</a>
+    </p>
   </section>
 
   <footer>
     <p>&copy; 2025 KMR Law. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+    </div>
   </footer>
 </body>
 </html>
